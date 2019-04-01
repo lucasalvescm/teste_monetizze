@@ -18,6 +18,10 @@ Após isso, para rodar o projeto, digite no terminal:
 python run.py
 ```
 
+Acesse no navegador: 
+
+localhost:5000
+
 OBS: 
  - Desconsiderar frontend da aplicação. Foi feita somente para facilitar a visualização dos dados.
  - A classe solicitada no teste está no diretório loteria_app/loteria/models.py
