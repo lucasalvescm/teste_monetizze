@@ -44,8 +44,17 @@ class Loteria(db.Model):
         for i in random:
             if len(random_lottery) == 6:
                 break
-            count += 1
             random_lottery.append(i)
         random_lottery.sort()
         self.result = random_lottery
 
+    def get_results(self):
+        games = self.games
+        results = {}
+        for key, list_numbers in games.items():
+            sorteds = 0
+            for number in list_numbers:
+                if number in self.result:
+                    sorteds += 1
+            results.update({str(list_numbers): sorteds})
+        return results

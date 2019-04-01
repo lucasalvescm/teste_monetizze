@@ -1,0 +1,19 @@
+<html>
+   <body>
+   <h1>Loteria</h1>
+   <h3>{{ result.erro }}</h3>
+   <h3>Resultado do sorteio: {{ result.result }}</h3>
+<table style="width:100%">
+  <tr>
+    <th>Jogos</th>
+    <th>Dezenas Sorteadas</th>
+  </tr>
+  {% for key, value in result.table.items() %}
+    <tr>
+      <th>{{ key }}</th>
+      <th>{{ value }}</th>
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>
